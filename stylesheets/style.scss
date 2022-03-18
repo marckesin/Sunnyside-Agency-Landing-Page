@@ -62,12 +62,41 @@ $light-salmon: hsl(26, 100%, 99%);
   position: relative;
 }
 
+.dark-blue {
+  color: $dark-blue;
+}
+
+.dark-desaturated-cyan {
+  color: $dark-desaturated-cyan;
+}
+
+.dark-moderate-cyan {
+  color: $dark-moderate-cyan;
+}
+
 .heading {
   padding-top: 11rem;
   font-size: 3.2rem;
   font-weight: 900;
   letter-spacing: 10px;
   color: $white;
+}
+
+.image-graphic-design {
+  @include background("../images/desktop/image-graphic-design.jpg");
+  height: 32rem;
+  padding: 0 9rem;
+}
+
+.image-photography {
+  @include background("../images/desktop/image-photography.jpg");
+  height: 32rem;
+  padding: 0 9rem;
+}
+
+.image-stand-out {
+  @include background("../images/desktop/image-stand-out.jpg");
+  height: 32rem;
 }
 
 .image-transform {
@@ -89,6 +118,10 @@ $light-salmon: hsl(26, 100%, 99%);
   @include background("../images/desktop/image-header.jpg");
 }
 
+.very-dark-desaturated-blue {
+  color: $very-dark-desaturated-blue;
+}
+
 @media (max-width: 600px) {
   .col-description {
     padding: 3rem 1.5rem;
@@ -101,6 +134,19 @@ $light-salmon: hsl(26, 100%, 99%);
   .heading {
     padding-top: 8rem;
     font-size: 2rem;
+  }
+
+  .image-graphic-design {
+    padding: 0 1.5rem;
+  }
+
+  .image-photography {
+    padding: 0 1.5rem;
+  }
+
+  .image-stand-out {
+    @include background("../images/mobile/image-stand-out.jpg");
+    height: 17.4rem;
   }
 
   .image-transform {
