@@ -137,7 +137,7 @@ h6 {
 }
 
 .heading {
-  font-size: 3.2rem;
+  font-size: 3.3rem;
   font-weight: 900;
   padding-top: 11rem;
   letter-spacing: 10px;
@@ -201,6 +201,7 @@ h6 {
 .navbar {
   position: absolute;
   width: 100%;
+  z-index: 1;
 }
 
 .navbar-nav {
@@ -220,6 +221,15 @@ h6 {
   height: 100vh;
   background: url("../images/desktop/image-header.jpg") no-repeat center;
   background-size: cover;
+  position: relative;
+}
+.section-1 span {
+  position: absolute;
+  top: -4.5rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: translate(49%, 50%);
 }
 
 .testimonials {
@@ -313,9 +323,17 @@ h6 {
     height: 10rem;
   }
 
+  .navbar-brand img {
+    width: 95%;
+    height: auto;
+  }
+
   .section-1 {
     background: url("../images/mobile/image-header.jpg") no-repeat center;
     background-size: cover;
+  }
+  .section-1 span {
+    transform: translate(45%, 60%);
   }
 
   .testimonials {
