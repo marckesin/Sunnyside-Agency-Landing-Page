@@ -53,11 +53,16 @@ h6 {
 }
 
 .attribution {
-  font-size: 11px;
+  font-size: 1rem;
   text-align: center;
+  background-color: #92d3c5;
+  padding: 3rem 0 0.5rem;
 }
 .attribution a {
-  color: #3e52a3;
+  color: #458c7e;
+}
+.attribution a:hover {
+  color: white !important;
 }
 
 .col-description {
@@ -99,6 +104,8 @@ h6 {
 
 .dark-desaturated-cyan {
   color: #25564b;
+  font-size: 1.75rem;
+  font-weight: 900;
 }
 
 .dark-moderate-cyan {
@@ -113,11 +120,29 @@ h6 {
   color: white;
 }
 
+.image-cone {
+  background: url("../images/desktop/image-gallery-cone.jpg") no-repeat center;
+  background-size: cover;
+  height: 25rem;
+}
+
 .image-graphic-design {
   background: url("../images/desktop/image-graphic-design.jpg") no-repeat center;
   background-size: cover;
   height: 32rem;
   padding: 0 9rem;
+}
+
+.images-milkbottles {
+  background: url("../images/desktop/image-gallery-milkbottles.jpg") no-repeat center;
+  background-size: cover;
+  height: 25rem;
+}
+
+.image-orange {
+  background: url("../images/desktop/image-gallery-orange.jpg") no-repeat center;
+  background-size: cover;
+  height: 25rem;
 }
 
 .image-photography {
@@ -133,10 +158,20 @@ h6 {
   height: 32rem;
 }
 
+.image-sugarcubes {
+  background: url("../images/desktop/image-gallery-sugarcubes.jpg") no-repeat center;
+  background-size: cover;
+  height: 25rem;
+}
+
 .image-transform {
   background: url("../images/desktop/image-transform.jpg") no-repeat center;
   background-size: cover;
   height: 32rem;
+}
+
+.media-icons {
+  gap: 1.5rem;
 }
 
 .navbar {
@@ -148,14 +183,52 @@ h6 {
   gap: 2rem;
 }
 
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url("../images/icon-hamburger.svg") !important;
+  width: 1.2rem;
+}
+
 .section-1 {
   height: 100vh;
   background: url("../images/desktop/image-header.jpg") no-repeat center;
   background-size: cover;
 }
 
+.testimonials {
+  padding: 8rem;
+  background-color: #fffcfa;
+}
+.testimonials h3 {
+  color: #a7abae;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  font-weight: 900;
+}
+.testimonials .avatar {
+  width: 3.75rem;
+}
+.testimonials .job {
+  font-size: 0.8rem;
+  color: #a7abae;
+}
+.testimonials .name {
+  color: #23303e;
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+}
+.testimonials .testimonial {
+  color: #5a636c;
+}
+
 .very-dark-desaturated-blue {
   color: #23303e;
+  font-size: 1.75rem;
+  font-weight: 900;
 }
 
 @media (max-width: 600px) {
@@ -176,6 +249,24 @@ h6 {
     padding: 0 1.5rem;
   }
 
+  .image-cone {
+    background: url("../images/desktop/image-gallery-cone.jpg") no-repeat center;
+    background-size: cover;
+    height: 10rem;
+  }
+
+  .images-milkbottles {
+    background: url("../images/mobile/image-gallery-milkbottles.jpg") no-repeat center;
+    background-size: cover;
+    height: 10rem;
+  }
+
+  .image-orange {
+    background: url("../images/mobile/image-gallery-orange.jpg") no-repeat center;
+    background-size: cover;
+    height: 10rem;
+  }
+
   .image-photography {
     padding: 0 1.5rem;
   }
@@ -192,9 +283,24 @@ h6 {
     height: 17.4rem;
   }
 
+  .image-sugarcubes {
+    background: url("../images/mobile/image-gallery-sugar-cubes.jpg") no-repeat center;
+    background-size: cover;
+    height: 10rem;
+  }
+
   .section-1 {
     background: url("../images/mobile/image-header.jpg") no-repeat center;
     background-size: cover;
+  }
+
+  .testimonials {
+    padding: 3rem 2rem;
+  }
+  .testimonials h3 {
+    letter-spacing: 4px;
+    font-size: 1rem;
+    font-weight: 700;
   }
 }
 
