@@ -116,7 +116,7 @@ $light-cyan: hsl(167, 43%, 70%);
 }
 
 .heading {
-  @include font-display(3.2rem, 900);
+  @include font-display(3.3rem, 900);
   padding-top: 11rem;
   letter-spacing: 10px;
   color: $white;
@@ -171,6 +171,7 @@ $light-cyan: hsl(167, 43%, 70%);
 .navbar {
   position: absolute;
   width: 100%;
+  z-index: 1;
 }
 
 .navbar-nav {
@@ -189,6 +190,16 @@ $light-cyan: hsl(167, 43%, 70%);
 .section-1 {
   height: 100vh;
   @include background("../images/desktop/image-header.jpg");
+  position: relative;
+
+  span {
+    position: absolute;
+    top: -4.5rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translate(49%, 50%);
+  }
 }
 
 .testimonials {
@@ -279,8 +290,19 @@ $light-cyan: hsl(167, 43%, 70%);
     height: 10rem;
   }
 
+  .navbar-brand {
+    img {
+      width: 95%;
+      height: auto;
+    }
+  }
+
   .section-1 {
     @include background("../images/mobile/image-header.jpg");
+
+    span {
+      transform: translate(45%, 60%);
+    }
   }
 
   .testimonials {
