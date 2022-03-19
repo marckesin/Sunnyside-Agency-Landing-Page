@@ -11,6 +11,7 @@ $dark-grayish-blue: hsl(232, 10%, 55%);
 $grayish-blue: hsl(210, 4%, 67%);
 $white: hsl(0, 0%, 100%);
 $light-salmon: hsl(26, 100%, 99%);
+$light-cyan: hsl(167, 43%, 70%);
 
 @mixin background($url) {
   background: url($url) no-repeat center;
@@ -18,11 +19,17 @@ $light-salmon: hsl(26, 100%, 99%);
 }
 
 .attribution {
-  font-size: 11px;
+  font-size: 1rem;
   text-align: center;
+  background-color: $light-cyan;
+  padding: 3rem 0 0.5rem;
 
   a {
-    color: hsl(228, 45%, 44%);
+    color: $dark-moderate-cyan;
+  }
+
+  a:hover {
+    color: $white !important;
   }
 }
 
@@ -68,6 +75,8 @@ $light-salmon: hsl(26, 100%, 99%);
 
 .dark-desaturated-cyan {
   color: $dark-desaturated-cyan;
+  font-size: 1.75rem;
+  font-weight: 900;
 }
 
 .dark-moderate-cyan {
@@ -82,10 +91,25 @@ $light-salmon: hsl(26, 100%, 99%);
   color: $white;
 }
 
+.image-cone {
+  @include background("../images/desktop/image-gallery-cone.jpg");
+  height: 25rem;
+}
+
 .image-graphic-design {
   @include background("../images/desktop/image-graphic-design.jpg");
   height: 32rem;
   padding: 0 9rem;
+}
+
+.images-milkbottles {
+  @include background("../images/desktop/image-gallery-milkbottles.jpg");
+  height: 25rem;
+}
+
+.image-orange {
+  @include background("../images/desktop/image-gallery-orange.jpg");
+  height: 25rem;
 }
 
 .image-photography {
@@ -99,9 +123,18 @@ $light-salmon: hsl(26, 100%, 99%);
   height: 32rem;
 }
 
+.image-sugarcubes {
+  @include background("../images/desktop/image-gallery-sugarcubes.jpg");
+  height: 25rem;
+}
+
 .image-transform {
   @include background("../images/desktop/image-transform.jpg");
   height: 32rem;
+}
+
+.media-icons {
+  gap: 1.5rem;
 }
 
 .navbar {
@@ -113,13 +146,56 @@ $light-salmon: hsl(26, 100%, 99%);
   gap: 2rem;
 }
 
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url("../images/icon-hamburger.svg") !important;
+  width: 1.2rem;
+}
+
 .section-1 {
   height: 100vh;
   @include background("../images/desktop/image-header.jpg");
 }
 
+.testimonials {
+  padding: 8rem;
+  background-color: $light-salmon;
+
+  h3 {
+    color: $grayish-blue;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    font-weight: 900;
+  }
+
+  .avatar {
+    width: 3.75rem;
+  }
+
+  .job {
+    font-size: 0.8rem;
+    color: $grayish-blue;
+  }
+
+  .name {
+    color: $very-dark-desaturated-blue;
+    font-family: "Fraunces", serif;
+    font-weight: 900;
+  }
+
+  .testimonial {
+    color: $very-dark-grayish-blue;
+  }
+}
+
 .very-dark-desaturated-blue {
   color: $very-dark-desaturated-blue;
+  font-size: 1.75rem;
+  font-weight: 900;
 }
 
 @media (max-width: 600px) {
@@ -140,6 +216,21 @@ $light-salmon: hsl(26, 100%, 99%);
     padding: 0 1.5rem;
   }
 
+  .image-cone {
+    @include background("../images/desktop/image-gallery-cone.jpg");
+    height: 10rem;
+  }
+
+  .images-milkbottles {
+    @include background("../images/mobile/image-gallery-milkbottles.jpg");
+    height: 10rem;
+  }
+
+  .image-orange {
+    @include background("../images/mobile/image-gallery-orange.jpg");
+    height: 10rem;
+  }
+
   .image-photography {
     padding: 0 1.5rem;
   }
@@ -154,7 +245,22 @@ $light-salmon: hsl(26, 100%, 99%);
     height: 17.4rem;
   }
 
+  .image-sugarcubes {
+    @include background("../images/mobile/image-gallery-sugar-cubes.jpg");
+    height: 10rem;
+  }
+
   .section-1 {
     @include background("../images/mobile/image-header.jpg");
+  }
+
+  .testimonials {
+    padding: 3rem 2rem;
+
+    h3 {
+      letter-spacing: 4px;
+      font-size: 1rem;
+      font-weight: 700;
+    }
   }
 }
