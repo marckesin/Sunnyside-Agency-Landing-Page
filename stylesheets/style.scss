@@ -1,7 +1,9 @@
 @use "reset";
 
 $soft-red: hsl(7, 99%, 70%);
+$soft-red-hover: hsla(7, 99%, 70%, 0.325);
 $yellow: hsl(51, 100%, 49%);
+$yellow-hover: hsla(51, 100%, 49%, 0.325);
 $dark-desaturated-cyan: hsl(167, 40%, 24%);
 $dark-blue: hsl(198, 62%, 26%);
 $dark-moderate-cyan: hsl(168, 34%, 41%);
@@ -16,6 +18,11 @@ $light-cyan: hsl(167, 43%, 70%);
 @mixin background($url) {
   background: url($url) no-repeat center;
   background-size: cover;
+}
+
+@mixin font-display($size, $weight) {
+  font-size: $size;
+  font-weight: $weight;
 }
 
 .attribution {
@@ -38,17 +45,8 @@ $light-cyan: hsl(167, 43%, 70%);
   background-color: $light-salmon;
   color: $very-dark-desaturated-blue !important;
 
-  a {
-    font-size: 0.9rem;
-    font-family: "Fraunces", serif;
-    font-weight: 900;
-    color: $very-dark-desaturated-blue !important;
-    padding-left: 0.4rem;
-  }
-
   h2 {
-    font-size: 2.3rem;
-    font-weight: 900;
+    @include font-display(2.3rem, 900);
     margin-bottom: 2rem;
   }
 
@@ -56,13 +54,44 @@ $light-cyan: hsl(167, 43%, 70%);
     color: $dark-grayish-blue;
     margin-bottom: 2rem;
   }
+
+  .learn-y,
+  .learn-r {
+    @include font-display(0.95rem, 900);
+    font-family: "Fraunces", serif;
+    color: $very-dark-desaturated-blue !important;
+    padding: 0 4px 4px;
+    display: inline-block;
+    transition: all 0.2s ease-in;
+  }
+
+  .learn-y {
+    border-bottom: 6px solid $yellow;
+  }
+
+  .learn-r {
+    border-bottom: 6px solid $soft-red;
+  }
+
+  .learn-r:hover {
+    border-bottom: 6px solid $soft-red-hover;
+  }
+
+  .learn-y:hover {
+    border-bottom: 6px solid $yellow-hover;
+  }
 }
 
 .contact {
+  @include font-display(0.8rem, 700);
   font-family: "Fraunces", serif;
-  font-weight: 900;
-  font-size: 0.8rem;
   color: $dark-blue !important;
+
+  &:hover {
+    color: $white !important;
+    background-color: hsla(196, 100%, 81%, 0.5) !important;
+    border-color: transparent !important;
+  }
 }
 
 .container-1 {
@@ -74,19 +103,21 @@ $light-cyan: hsl(167, 43%, 70%);
 }
 
 .dark-desaturated-cyan {
+  @include font-display(1.75rem, 900);
   color: $dark-desaturated-cyan;
-  font-size: 1.75rem;
-  font-weight: 900;
 }
 
 .dark-moderate-cyan {
   color: $dark-moderate-cyan;
 }
 
+.frontend {
+  font-size: small !important;
+}
+
 .heading {
+  @include font-display(3.2rem, 900);
   padding-top: 11rem;
-  font-size: 3.2rem;
-  font-weight: 900;
   letter-spacing: 10px;
   color: $white;
 }
@@ -165,11 +196,10 @@ $light-cyan: hsl(167, 43%, 70%);
   background-color: $light-salmon;
 
   h3 {
+    @include font-display(1.1rem, 900);
     color: $grayish-blue;
     letter-spacing: 5px;
     text-transform: uppercase;
-    font-size: 1.1rem;
-    font-weight: 900;
   }
 
   .avatar {
@@ -193,9 +223,8 @@ $light-cyan: hsl(167, 43%, 70%);
 }
 
 .very-dark-desaturated-blue {
+  @include font-display(1.75rem, 900);
   color: $very-dark-desaturated-blue;
-  font-size: 1.75rem;
-  font-weight: 900;
 }
 
 @media (max-width: 600px) {
@@ -258,9 +287,8 @@ $light-cyan: hsl(167, 43%, 70%);
     padding: 3rem 2rem;
 
     h3 {
+      @include font-display(1rem, 700);
       letter-spacing: 4px;
-      font-size: 1rem;
-      font-weight: 700;
     }
   }
 }
