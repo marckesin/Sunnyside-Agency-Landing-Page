@@ -222,6 +222,7 @@ h6 {
   background: url("../images/desktop/image-header.jpg") no-repeat center;
   background-size: cover;
   position: relative;
+  overflow: hidden;
 }
 .section-1 span {
   position: absolute;
@@ -265,7 +266,7 @@ h6 {
   color: #23303e;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 991px) {
   .col-description {
     padding: 3rem 1.5rem;
     text-align: center;
@@ -326,6 +327,41 @@ h6 {
   .navbar-brand img {
     width: 95%;
     height: auto;
+  }
+
+  .navbar-collapse {
+    background-color: white;
+    margin-top: 3.2rem;
+    position: relative;
+  }
+  .navbar-collapse::after {
+    content: "";
+    position: absolute;
+    top: -1rem;
+    right: 0;
+    border-width: 20px;
+    border-style: solid;
+    border-color: transparent white transparent transparent;
+  }
+  .navbar-collapse .nav-link.contact {
+    background-color: #fad400 !important;
+    color: #23303e !important;
+    border-color: transparent !important;
+    padding: 0.75rem 0.5rem;
+    width: 7rem;
+    margin: auto;
+  }
+  .navbar-collapse .nav-link {
+    color: gray !important;
+    text-align: center;
+  }
+  .navbar-collapse .navbar-nav {
+    gap: 0.85rem;
+    padding: 1.5rem 5rem 2rem;
+  }
+
+  .navbar-toggler {
+    padding: 0 !important;
   }
 
   .section-1 {
